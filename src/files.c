@@ -1015,7 +1015,8 @@ void execute_command(const char *command)
 #if defined(HAVE_FORK) && defined(HAVE_PIPE) && defined(HAVE_WAIT)
 	int from_fd[2], to_fd[2];
 		/* The pipes through which text will be written and read. */
-	struct sigaction oldaction, newaction = {{0}};
+	struct sigaction oldaction, newaction;
+	memset(&oldaction, 0, sizeof(struct sigaction));
 		/* Original and temporary handlers for SIGINT. */
 	ssize_t was_lineno = (openfile->mark ? 0 : openfile->current->lineno);
 	int command_status, sender_status;
