@@ -1416,7 +1416,7 @@ bool changes_something(functionptrtype f)
 			f == do_replace || f == do_verbatim_input);
 }
 
-#ifndef NANO_TINY
+#if 0
 /* Read in all waiting input bytes and paste them into the buffer in one go. */
 void suck_up_input_and_paste_it(void)
 {
@@ -1693,11 +1693,13 @@ void process_a_keystroke(void)
 	} else if (openfile->current != was_current)
 		also_the_last = FALSE;
 
+#if 0
 	if (bracketed_paste)
 		suck_up_input_and_paste_it();
 
 	if (ISSET(STATEFLAGS) && openfile->mark != was_mark)
 		titlebar(NULL);
+#endif
 #endif
 }
 
