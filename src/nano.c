@@ -230,7 +230,7 @@ void restore_terminal(void)
 {
 	curs_set(1);
 	endwin();
-#ifndef NANO_TINY
+#if 0
 	printf("\x1B[?2004l");
 	fflush(stdout);
 #endif
@@ -1223,7 +1223,7 @@ void terminal_init(void)
 
 	disable_kb_interrupt();
 
-#ifndef NANO_TINY
+#if 0
 	/* Tell the terminal to enable bracketed pastes. */
 	printf("\x1B[?2004h");
 	fflush(stdout);
@@ -1416,7 +1416,7 @@ bool changes_something(functionptrtype f)
 			f == do_replace || f == do_verbatim_input);
 }
 
-#if 0
+#ifndef NANO_TINY
 /* Read in all waiting input bytes and paste them into the buffer in one go. */
 void suck_up_input_and_paste_it(void)
 {
@@ -1693,7 +1693,7 @@ void process_a_keystroke(void)
 	} else if (openfile->current != was_current)
 		also_the_last = FALSE;
 
-#if 0
+#ifndef NANO_TINY
 	if (bracketed_paste)
 		suck_up_input_and_paste_it();
 

@@ -1506,7 +1506,7 @@ char *get_verbatim_kbinput(WINDOW *frame, size_t *count)
 	if (!ISSET(RAW_SEQUENCES))
 		keypad(frame, FALSE);
 
-#ifndef NANO_TINY
+#if 0
 	/* Turn bracketed-paste mode off. */
 	printf("\x1B[?2004l");
 	fflush(stdout);
@@ -1529,7 +1529,7 @@ char *get_verbatim_kbinput(WINDOW *frame, size_t *count)
 
 	linger_after_escape = FALSE;
 
-#ifndef NANO_TINY
+#if 0
 	/* Turn bracketed-paste mode back on. */
 	printf("\x1B[?2004h");
 	fflush(stdout);
