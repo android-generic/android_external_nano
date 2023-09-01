@@ -1208,7 +1208,7 @@
 #define PACKAGE_NAME "GNU nano"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "GNU nano 6.0"
+#define PACKAGE_STRING "GNU nano 7.2"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "nano"
@@ -1217,7 +1217,7 @@
 #define PACKAGE_URL "http://www.gnu.org/software/nano/"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "6.0"
+#define PACKAGE_VERSION "7.2"
 
 /* Where data are placed to. */
 #define PKGDATADIR "/usr/local/share/nano"
@@ -1405,7 +1405,7 @@
 /* #undef USE_WINDOWS_THREADS */
 
 /* Version number of package */
-#define VERSION "6.0"
+#define VERSION "7.2"
 
 /* Define to l, ll, u, ul, ull, etc., as suitable for constants of type
    'wchar_t'. */
